@@ -1,0 +1,65 @@
+#	   ____ /         
+#	  / __/  _____ _
+#	 / _/| |/ / _ `/
+#	/___/|___/\_,_/ 
+#---------------------
+#Sz. Marcell AKA. ChickenSenpai777       
+
+#
+options:
+	botprefix: &7&l[&fEva&7&l]&b
+	noperm: &cSorry %player% but you don't have permission to do this!
+	Despasito: https://www.pastefile.com/download/ZPCRZ7
+on chat:
+	if chat message contains "hello" and "eva":
+		wait 0.1 seconds
+		broadcast "{@botprefix} Hi %player%!"
+		stop
+		
+on chat:
+	if chat message contains "eva" and "reload":
+		if player have permission "eva.reload":
+			wait 0.1 seconds
+			broadcast "{@botprefix} Okay %player%!"
+			broadcast "{@botprefix} I'm reloading myself please wait for a little"
+			wait 0.5 seconds
+			Execute console command "/skript reload Éva-Chatbot"
+			play song file "plugins/Skript/scripts/Eva-resources/startup.nbs" to player
+			broadcast "{@botprefix} Okay I'm done."
+		if player doesn't have permission "eva.reload":
+			wait 0.1 seconds
+			broadcast "{@botprefix} {@noperm}"
+
+on chat:
+	if chat message contains "eva" and "kick" and "caleb":
+		if player have permission "eva.byecaleb":
+			wait 0.1 seconds
+			broadcast "{@botprefix} Okay %player%!"
+			wait 0.1 seconds
+			Execute console command "/kick C10_MC &b&lBye Caleb"
+		if player doesn't have permission "eva.byecaleb":
+			wait 0.1 seconds
+			broadcast "{@botprefix} {@noperm}"
+
+on chat:
+	if chat message contains "eva" and "this" and "is" and "so" and "sad" and "play" and "despacito":
+		wait 0.1 seconds
+		broadcast "{@botprefix} Okay."
+		song stop for player
+		play song file "plugins/Skript/scripts/Eva-resources/despacito.nbs" to player
+
+on chat:
+	if chat message contains "eva" and "stop" and "despasito":
+		wait 0.1 seconds
+		broadcast "{@botprefix} Okay."
+		song stop for player
+
+#TESTING
+command /tcp:
+	trigger:
+		if player doesn't have permission "testperm":
+			send "{@botprefix} &c✖"
+		if player have permission "testperm":
+			send "{@botprefix} &a✔"
+			
+#2020.01.29
