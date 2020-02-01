@@ -9,7 +9,7 @@
 options:
 	botprefix: &7&l[&fEva&7&l]&b
 	noperm: &cSorry %player% but you don't have permission to do this!
-	Despasito: https://www.pastefile.com/download/ZPCRZ7
+
 on chat:
 	if chat message contains "hello" and "eva":
 		wait 0.1 seconds
@@ -29,7 +29,7 @@ on chat:
 		if player doesn't have permission "eva.reload":
 			wait 0.1 seconds
 			broadcast "{@botprefix} {@noperm}"
-
+#mc.dohaw.net
 on chat:
 	if chat message contains "eva" and "kick" and "caleb":
 		if player have permission "eva.byecaleb":
@@ -40,14 +40,15 @@ on chat:
 		if player doesn't have permission "eva.byecaleb":
 			wait 0.1 seconds
 			broadcast "{@botprefix} {@noperm}"
-
+			
+#do not use this more than 1 time!! idk how to stop it!!! plz help
 on chat:
 	if chat message contains "eva" and "this" and "is" and "so" and "sad" and "play" and "despacito":
 		wait 0.1 seconds
 		broadcast "{@botprefix} Okay."
 		song stop for player
 		play song file "plugins/Skript/scripts/Eva-resources/despacito.nbs" to player
-
+#don't working
 on chat:
 	if chat message contains "eva" and "stop" and "despasito":
 		wait 0.1 seconds
