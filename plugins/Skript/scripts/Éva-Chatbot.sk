@@ -5,16 +5,51 @@
 #---------------------
 #Sz. Marcell AKA. ChickenSenpai777       
 
-#
 options:
 	botprefix: &7&l[&fEva&7&l]&b
 	noperm: &cSorry %player% but you don't have permission to do this!
-
+	commandkick: /kick %player% Bye 
+	
+# ___      _  _   
+#|_ _|___ | || |__
+# | |<_> || || / /
+# |_|<___||_||_\_\
+                 
 on chat:
 	if chat message contains "hello" and "eva":
 		wait 0.1 seconds
 		broadcast "{@botprefix} Hi %player%!"
 		stop
+		
+on chat:
+	if chat message contains "owo" and "eva":
+		wait 0.1 seconds
+		broadcast "{@botprefix} OwO"
+		stop
+		
+on chat:
+	if chat message contains "sup" and "eva":
+		wait 0.1 seconds
+		broadcast "{@botprefix} Nothing man. Just at the library doing hw"
+		stop
+
+on chat:
+	if chat message contains "creeper":
+		wait 0.1 seconds
+		broadcast "{@botprefix} Aw man"
+		stop
+		
+on chat:
+	if chat message contains "i" and "used" and "to" and "rule" and "the" and "world":
+		wait 0.1 seconds
+		broadcast "{@botprefix} Chunks would load when I gave the word"
+		stop
+
+# ___      _  _                                         _ 
+#|_ _|___ | || |__  ___  ___ ._ _ _ ._ _ _  ___ ._ _  _| |
+# | |<_> || || / / / | '/ . \| ' ' || ' ' |<_> || ' |/ . |
+# |_|<___||_||_\_\ \_|_.\___/|_|_|_||_|_|_|<___||_|_|\___|
+                                                         
 		
 on chat:
 	if chat message contains "eva" and "reload":
@@ -29,6 +64,22 @@ on chat:
 		if player doesn't have permission "eva.reload":
 			wait 0.1 seconds
 			broadcast "{@botprefix} {@noperm}"
+#reload command	
+#its the same shit but quiet
+command /evareload:
+	trigger:
+		if player have permission "eva.reload":
+			wait 0.1 seconds
+			message "{@botprefix} Okay %player%!"
+			message "{@botprefix} I'm reloading myself please wait for a little"
+			wait 0.5 seconds
+			Execute console command "/skript reload Éva-Chatbot"
+			play song file "plugins/Skript/scripts/Eva-resources/startup.nbs" to player
+			message "{@botprefix} Okay I'm done."
+		if player doesn't have permission "eva.reload":
+			wait 0.1 seconds
+			message "{@botprefix} {@noperm}"
+
 #mc.dohaw.net
 on chat:
 	if chat message contains "eva" and "kick" and "caleb":
@@ -40,7 +91,12 @@ on chat:
 		if player doesn't have permission "eva.byecaleb":
 			wait 0.1 seconds
 			broadcast "{@botprefix} {@noperm}"
-			
+
+# ___                         _    _       
+#| . \ ___  ___ ___  ___  ___<_> _| |_ ___ 
+#| | |/ ._><_-<| . \<_> |<_-<| |  | | / . \
+#|___/\___./__/|  _/<___|/__/|_|  |_| \___/
+#              |_|                         		
 #do not use this more than 1 time!! idk how to stop it!!! plz help
 on chat:
 	if chat message contains "eva" and "this" and "is" and "so" and "sad" and "play" and "despacito":
@@ -54,13 +110,103 @@ on chat:
 		wait 0.1 seconds
 		broadcast "{@botprefix} Okay."
 		song stop for player
-
-#TESTING
+# ___  ___  ___ 
+#|_ _||  _>| . \
+# | | | <__|  _/
+# |_| `___/|_|  
+               
 command /tcp:
 	trigger:
 		if player doesn't have permission "testperm":
 			send "{@botprefix} &c✖"
 		if player have permission "testperm":
 			send "{@botprefix} &a✔"
+	
+
+
+# ___                                 _   _ __ _       _   
+#|  _> ___ ._ _ _ ._ _ _  ___ ._ _  _| | | / /<_> ___ | |__
+#| <__/ . \| ' ' || ' ' |<_> || ' |/ . | |  \ | |/ | '| / /
+#`___/\___/|_|_|_||_|_|_|<___||_|_|\___| |_\_\|_|\_|_.|_\_\
+                                                          	
+			
+command //calc:
+	trigger:
+		if player doesn't have permission "calc":
+			send "{@botprefix}&4 Nice try!" to player
+			wait 0.2 seconds
+			execute console command "{@commandkick}"
+			stop trigger
+command /worldedit:/calc:
+	trigger:
+		if player doesn't have permission "calc":
+			send "{@botprefix}&4 Nice try!" to player
+			wait 0.2 seconds
+			execute console command "{@commandkick}"
+			stop trigger
+command //calculate:
+	trigger:
+		if player doesn't have permission "calc":
+			send "{@botprefix}&4 Nice try!" to player
+			wait 0.2 seconds
+			execute console command "{@commandkick}"
+			stop trigger
+command /worldedit:/calculate:
+	trigger:
+		if player doesn't have permission "calc":
+			send "{@botprefix}&4 Nice try!" to player
+			wait 0.2 seconds
+			execute console command "{@commandkick}"
+			stop trigger
+command /pl:
+	trigger:
+		if player doesn't have permission "plugin":
+			send "{@botprefix}&4 Nice try!" to player
+			wait 0.2 seconds
+			execute console command "{@commandkick}"
+			stop trigger
+command /plugins:
+	trigger:
+		if player doesn't have permission "plugin":
+			send "{@botprefix}&4 Nice try!" to player
+			wait 0.2 seconds
+			execute console command "{@commandkick}"
+			stop trigger
+command /bukkit:pl:
+	trigger:
+		if player doesn't have permission "plugin":
+			send "{@botprefix}&4 Nice try!" to player
+			wait 0.2 seconds
+			execute console command "{@commandkick}"
+			stop trigger
+command /bukkit:?:
+	trigger:
+		if player doesn't have permission "plugin":
+			send "{@botprefix}&4 Nice try!" to player
+			wait 0.2 seconds
+			execute console command "{@commandkick}"
+			stop trigger
+command /bukkit:plugins:
+	trigger:
+		if player doesn't have permission "plugin":
+			send "{@botprefix}&4 Nice try!" to player
+			wait 0.2 seconds
+			execute console command "{@commandkick}"
+			stop trigger
+command /spigot:pl:
+	trigger:
+		if player doesn't have permission "plugin":
+			send "{@botprefix}&4 Nice try!" to player
+			wait 0.2 seconds
+			execute console command "{@commandkick}"
+			stop trigger
+
+command /spigot:plugins:
+	trigger:
+		if player doesn't have permission "plugin":
+			send "{@botprefix}&4 Nice try!" to player
+			wait 0.2 seconds
+			execute console command "{@commandkick}"
+			stop trigger
 			
 #2020.01.29
